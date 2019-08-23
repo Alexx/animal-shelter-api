@@ -11,18 +11,8 @@ Animal.destroy_all
 types = ['Cat', 'Dog', 'Rabbit']
 
 50.times do |index|
-  animal = Animal.create!(name: Faker::Dessert.variety,
-    animal_type: types[rand(0..2)],)
-    if animal.persisted?
-      if animal.animal_type == "Cat"
-        animal.age = rand(1..15)
-        animal.weight = rand(1..20)
-      elsif animal.animal_type == "Dog"
-        animal.age = rand(1..15)
-        animal.weight = rand(5..80)
-      elsif animal.animal_type == "Rabbit"
-        animal.age = rand(1..10)
-        animal.weight = rand(1..10)
-      end
+  animal = Animal.create!(name: Faker::Name.first_name,
+                          animal_type: types[rand(0..2)],
+                          age: rand(1..10),
+                          weight: rand(5..20))
     end
-  end
