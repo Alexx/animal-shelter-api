@@ -219,7 +219,7 @@
         null,
         null
       ],
-      "/Users/alexsiegberg/Desktop/animal-shelter-api/app/controllers/animals_controller.rb": [
+      "/Users/alexsiegberg/Desktop/animal-shelter-api/app/controllers/v1/animals_controller.rb": [
         1,
         null,
         1,
@@ -235,6 +235,18 @@
         1,
         0,
         0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
         0,
         null,
         null,
@@ -244,15 +256,6 @@
         0,
         0,
         null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
         null,
         1,
         0,
@@ -305,6 +308,11 @@
         1,
         2,
         2,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -328,6 +336,6 @@
         null
       ]
     },
-    "timestamp": 1566598047
+    "timestamp": 1566603548
   }
 }
