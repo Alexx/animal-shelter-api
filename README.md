@@ -36,10 +36,10 @@ Step 4: Open Localhost:3000 in your browser
 | GET | 'v1/' | Return all animals |
 | GET | 'v1/animals' | Return all animals |
 | POST| 'v1//animals?name=[NAME]&animal_type=[TYPE]&age=[AGE]&weight=[WEIGHT]' | Creates a new animal |
-| GET | 'v1/animals/id' | Return an animal at a specified id |
+| GET | 'v1/animals/id' | Return an animal by a specified id |
 | GET | 'v1/search?name=[NAME]' | Search animals by name |
 | DELETE | 'v1/animals/id | Delete an animal by id |
-| PATCH | 'v1/animals/id' | Edit an animal name at a specified id (Pass in name) |
+| PATCH | 'v1/animals/id?name=[NAME]' | Edit an animal name by a specified id |
 | GET | 'v1/random' | Return a random animal |
 | GET | 'v1/all_cats' | Return all cats |
 | GET | 'v1/all_dogs' | Return all dogs |
