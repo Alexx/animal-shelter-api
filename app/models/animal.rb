@@ -1,4 +1,5 @@
 class Animal < ApplicationRecord
+  before_save(:titleize_product)
   validates :name, presence: true
   validates :animal_type, presence: true
   validates :age, presence: true
@@ -38,4 +39,9 @@ class Animal < ApplicationRecord
   scope :youngestRabbit, -> {where(animal_type: "Rabbit")
                          .order("age asc")
                          .limit(1)}
+
+   private
+     def titleize_product
+       self.name = self.name.titleize
+     end
 end

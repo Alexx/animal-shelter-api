@@ -18,8 +18,12 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    @animal = Animal.find_by_name(params[:name])
-    json_response(@animal)
+    if Animal.find_by_name(params[:name])
+      @animal = Animal.find_by_name(params[:name])
+      json_response(@animal)
+    else
+      json_response("Returned no results for '#{params[:name]}'")
+    end
   end
 
   def destroy
