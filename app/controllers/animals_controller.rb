@@ -24,4 +24,19 @@ class AnimalsController < ApplicationController
     @rabbit = Animal.largestRabbit
     json_response(@rabbit)
   end
+
+  def youngestCat
+    @cat = Animal.youngestCat
+    json_response(@cat)
+  end
+
+  def youngestDog
+    @dog = Animal.youngestDog
+    json_response(@dog)
+  end
+
+  def youngestRabbit
+    @rabbit = Animal.youngestRabbit
+    json_response(@rabbit)
+  end
 end

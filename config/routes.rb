@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get "/largest_cat", to: 'animals#largestCat'
   get "/largest_dog", to: 'animals#largestDog'
   get "/largest_rabbit", to: 'animals#largestRabbit'
+  get "/youngest_cat", to: 'animals#youngestCat'
+  get "/youngest_dog", to: 'animals#youngestDog'
+  get "/youngest_rabbit", to: 'animals#youngestRabbit'
 end
