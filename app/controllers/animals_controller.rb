@@ -10,6 +10,23 @@ class AnimalsController < ApplicationController
     json_response(@animal)
   end
 
+  #Return all animals by animal_type
+  def allCats
+    @cats = Animal.allCats
+    json_response(@cats)
+  end
+
+  def allDogs
+    @dogs = Animal.allDogs
+    json_response(@dogs)
+  end
+
+  def allRabbits
+    @rabbits = Animal.allRabbits
+    json_response(@rabbits)
+  end
+
+  #Return heaviest animal by animal_type
   def largestCat
     @cat = Animal.largestCat
     json_response(@cat)
@@ -25,6 +42,7 @@ class AnimalsController < ApplicationController
     json_response(@rabbit)
   end
 
+  #Return youngest animal by animal_type
   def youngestCat
     @cat = Animal.youngestCat
     json_response(@cat)
