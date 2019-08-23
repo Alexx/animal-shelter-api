@@ -10,11 +10,14 @@ class AnimalsController < ApplicationController
     json_response(@animal)
   end
 
+  def create
+    @animal = Animal.create(animal_params)
+    json_response(@animal)
+  end
+
   def update
     @animal= Animal.find(params[:id])
-    if @animal.update(animal_params)
-      @animal.name = params[:name]
-    end
+    @animal.update(animal_params)
   end
 
   def search
@@ -83,5 +86,10 @@ class AnimalsController < ApplicationController
   def youngestRabbit
     @rabbit = Animal.youngestRabbit
     json_response(@rabbit)
+  end
+
+  private
+  def animal_params
+    params.permit(:name, :animal_type, :age, :weight)
   end
 end
