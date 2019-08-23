@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'pivotal_git_scripts'
-gem 'faker'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -37,11 +37,12 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'faker'
+  gem 'factory_bot'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'factory_bot'
 end
 
 group :development do

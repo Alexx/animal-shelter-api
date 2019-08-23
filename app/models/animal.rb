@@ -10,8 +10,8 @@ class Animal < ApplicationRecord
                         .limit(1)}
 
   scope :largestRabbit, -> {where(animal_type: "Rabbit")
-                        .order("weight desc")
-                        .limit(1)}
+                           .order("weight desc")
+                           .limit(1)}
 
 
 end
