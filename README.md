@@ -29,15 +29,17 @@ Step 3: Create database
 
 Step 4: Open Localhost:3000 in your browser
 
-## Routes
+## Routes & Endpoints
 
 | Method | Path | Result |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----:|
 | GET | 'v1/' | Return all animals |
 | GET | 'v1/animals' | Return all animals |
-| Post | 'v1/animals' | Creates a new animal (Pass in name, animal_type, age and weight) |
+| POST| 'v1//animals?name=[NAME]&animal_type=[TYPE]&age=[AGE]&weight=[WEIGHT]' | Creates a new animal |
 | GET | 'v1/animals/id' | Return an animal at a specified id |
-| Patch | 'v1/animals/id' | Edit an animal name at a specified id (Pass in name) |
+| GET | 'v1/search?name=[NAME]' | Search animals by name |
+| DELETE | 'v1/animals/id | Delete an animal by id |
+| PATCH | 'v1/animals/id' | Edit an animal name at a specified id (Pass in name) |
 | GET | 'v1/random' | Return a random animal |
 | GET | 'v1/all_cats' | Return all cats |
 | GET | 'v1/all_dogs' | Return all dogs |
@@ -48,7 +50,6 @@ Step 4: Open Localhost:3000 in your browser
 | GET | 'v1/youngest_cat' | Return youngest cat |
 | GET | 'v1/youngest_dog' | Return youngest dog |
 | GET | 'v1/youngest_rabbit' | Return youngest rabbit |
-
 
 ## Technologies Used
 
