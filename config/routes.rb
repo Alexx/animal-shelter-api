@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get "/youngest_cat", to: 'animals#youngestCat'
   get "/youngest_dog", to: 'animals#youngestDog'
   get "/youngest_rabbit", to: 'animals#youngestRabbit'
+  get "/search", to: 'animals#search'
 end

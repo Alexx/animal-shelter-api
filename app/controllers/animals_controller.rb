@@ -14,8 +14,12 @@ class AnimalsController < ApplicationController
     @animal= Animal.find(params[:id])
     if @animal.update(animal_params)
       @animal.name = params[:name]
-      byebug
     end
+  end
+
+  def search
+    @animal = Animal.find_by_name(params[:name])
+    json_response(@animal)
   end
 
   def destroy
