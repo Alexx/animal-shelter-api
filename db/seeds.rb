@@ -10,9 +10,23 @@ Animal.destroy_all
 
 types = ['Cat', 'Dog', 'Rabbit']
 
-50.times do |index|
-  animal = Animal.create!(name: Faker::Name.first_name,
-                          animal_type: types[rand(0..2)],
-                          age: rand(1..10),
-                          weight: rand(5..20))
-    end
+rand(20..40).times do |index|
+  Animal.create!(name: Faker::Name.first_name,
+    animal_type: types[0],
+    age: rand(1..20),
+    weight: rand(3..20))
+  end
+
+rand(15..30).times do |index|
+  Animal.create!(name: Faker::Name.first_name,
+    animal_type: types[1],
+    age: rand(1..20),
+    weight: rand(10..80))
+  end
+
+rand(10..20).times do |index|
+  Animal.create!(name: Faker::Name.first_name,
+    animal_type: types[2],
+    age: rand(1..10),
+    weight: rand(2..15))
+  end
