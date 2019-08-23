@@ -1,4 +1,7 @@
 require 'rails_helper'
+require 'simplecov'
+
+SimpleCov.start
 
 describe Animal, type: :model do
   it { should validate_presence_of :name }
