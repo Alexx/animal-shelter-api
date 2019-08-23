@@ -8,13 +8,13 @@ class Animal < ApplicationRecord
                     .limit(1)}
 
   scope :allCats, -> {where(animal_type: "Cat")
-                     .order("name desc")}
+                     .order("name asc")}
 
   scope :allDogs, -> {where(animal_type: "Dog")
-                     .order("name desc")}
+                     .order("name asc")}
 
   scope :allRabbits, -> {where(animal_type: "Rabbit")
-                        .order("name desc")}
+                        .order("name asc")}
 
   scope :largestCat, -> {where(animal_type: "Cat")
                         .order("weight desc")

@@ -1,8 +1,27 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = Animal.all.order("animal_type ASC").limit(100)
+    @animals = Animal.all.order("animal_type ASC")
     json_response(@animals)
+  end
+
+  def show
+    @animal = Animal.find(params[:id])
+    json_response(@animal)
+  end
+
+  def update
+    @animal= Animal.find(params[:id])
+    if @animal.update(animal_params)
+      @animal.name = params[:name]
+      byebug
+    end
+  end
+
+  def destroy
+    @animal = Animal.find(params[:id])
+    @animal.delete
+    json_response( "Deleted #{ @animal.name }" )
   end
 
   def random
