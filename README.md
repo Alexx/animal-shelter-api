@@ -29,6 +29,27 @@ Step 3: Create database
 
 Step 4: Open Localhost:3000 in your browser
 
+## Routes
+
+| Method | Path | Result |
+| ------------- |:-------------:| -----:|
+| GET | 'v1/' | Return all animals |
+| GET | 'v1/animals' | Return all animals |
+| Post | 'v1/animals' | Creates a new animal (Pass in name, animal_type, age and weight) |
+| GET | 'v1/animals/id' | Return an animal at a specified id |
+| Patch | 'v1/animals/id' | Edit an animal name at a specified id (Pass in name) |
+| GET | 'v1/random' | Return a random animal |
+| GET | 'v1/all_cats' | Return all cats |
+| GET | 'v1/all_dogs' | Return all dogs |
+| GET | 'v1/all_rabbits' | Return largest rabbit |
+| GET | 'v1/largest_cat' | Return largest cat |
+| GET | 'v1/largest_dog' | Return largest dog |
+| GET | 'v1/largest_rabbit' | Return all rabbits |
+| GET | 'v1/youngest_cat' | Return youngest cat |
+| GET | 'v1/youngest_dog' | Return youngest dog |
+| GET | 'v1/youngest_rabbit' | Return youngest rabbit |
+
+
 ## Technologies Used
 
 _Ruby on Rails_
